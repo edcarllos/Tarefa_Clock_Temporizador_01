@@ -1,0 +1,153 @@
+{
+    "version": 1,
+    "author": "Embarcatech",
+    "editor": "wokwi",
+    "parts": [
+        {
+            "type": "wokwi-pi-pico",
+            "id": "pico",
+            "top": 6.45,
+            "left": 99.6,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-led",
+            "id": "led_green",
+            "top": 82.8,
+            "left": -140.2,
+            "attrs": {
+                "color": "limegreen"
+            }
+        },
+        {
+            "type": "wokwi-resistor",
+            "id": "resistor1",
+            "top": 119.15,
+            "left": -57.6,
+            "attrs": {
+                "value": "330"
+            }
+        },
+        {
+            "type": "wokwi-resistor",
+            "id": "resistor2",
+            "top": 157.55,
+            "left": -57.6,
+            "attrs": {
+                "value": "330"
+            }
+        },
+        {
+            "type": "wokwi-resistor",
+            "id": "resistor3",
+            "top": 195.95,
+            "left": -57.6,
+            "attrs": {
+                "value": "330"
+            }
+        },
+        {
+            "type": "wokwi-led",
+            "id": "led_green1",
+            "top": 121.2,
+            "left": -140.2,
+            "attrs": {
+                "color": "yellow"
+            }
+        },
+        {
+            "type": "wokwi-led",
+            "id": "led_green2",
+            "top": 159.6,
+            "left": -140.2,
+            "attrs": {
+                "color": "red"
+            }
+        }
+    ],
+    "connections": [
+        [
+            "resistor1:1",
+            "led_green:A",
+            "green",
+            [
+                "v0",
+                "h-57.6"
+            ]
+        ],
+        [
+            "resistor2:1",
+            "led_green1:A",
+            "green",
+            [
+                "v0",
+                "h-57.6"
+            ]
+        ],
+        [
+            "resistor3:1",
+            "led_green2:A",
+            "green",
+            [
+                "v0",
+                "h-57.6"
+            ]
+        ],
+        [
+            "led_green:C",
+            "pico:GND.2",
+            "green",
+            [
+                "h-38",
+                "v-57.6"
+            ]
+        ],
+        [
+            "led_green1:C",
+            "pico:GND.2",
+            "green",
+            [
+                "h-38",
+                "v-96"
+            ]
+        ],
+        [
+            "led_green2:C",
+            "pico:GND.2",
+            "green",
+            [
+                "h-38",
+                "v-134.4"
+            ]
+        ],
+        [
+            "resistor3:2",
+            "pico:GP13",
+            "green",
+            [
+                "h75.6",
+                "v-48"
+            ]
+        ],
+        [
+            "resistor1:2",
+            "pico:GP11",
+            "green",
+            [
+                "h75.6",
+                "v28.8",
+                "h28.8"
+            ]
+        ],
+        [
+            "resistor2:2",
+            "pico:GP12",
+            "green",
+            [
+                "v-19.2",
+                "h104.4"
+            ]
+        ]
+    ],
+    "dependencies": {}
+}
